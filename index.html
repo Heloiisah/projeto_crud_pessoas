@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pessoas - CRUD</title>
 
-<link rel="stylesheet" href="css/style_pessoas.css">
+    <link rel="stylesheet" href="css/style_pessoas.css">
 
+    <script src="js/scripts_pessoas.js" defer></script>
 </head>
+
 <body>
 
     <div id="geral">
-        <h3>Cadastro Aluno </h3>
 
-<div id="div-form-pessoa">
+        <h3>Cadastro Aluno</h3>
 
-    <form id="div-form-pessoa">
-        <label for="nome"> Nome</label>
-        <input type="text" name="nome" id="nome">
+        <div id="div-form-pessoa">
 
-         <label for="idade">Idade</label>
-         <input type="text" name=" idade" id="idade">
+            <form id="form-pessoa">
 
-        <label for="Renda">Renda</label>
-        <input type="text" name="renda" id="renda">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome">
 
-        <button type="submit" id="btn- add">Adicionar</button>
-        <button type="reset" id="btn-limpar">Limpar</button>
-    </form>
-</div>
-       
-<div id="div-lista-pessoas">
+                <label for="idade">Idade</label>
+                <input type="text" name="idade" id="idade">
 
+                <label for="renda">Renda</label>
+                <input type="text" name="renda" id="renda">
 
+                <button type="submit" id="btn-add">
+                    Adicionar
+                </button>
 
-</div>
+                <button type="reset" id="btn-limpar">
+                    Limpar
+                </button>
+
+            </form>
+
+        </div>
+
+        <div id="div-lista-pessoas">
+
+        </div>
+
     </div>
-    
+
 </body>
+
 </html>
