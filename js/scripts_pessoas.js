@@ -14,37 +14,40 @@ formPessoa.addEventListener('submit', (evt) => {
     // CRIAR OBJETO FORMDATA
     const dadosFormPessoa = new FormData(formPessoa)
 
-    // CRIAR OBJETO PESSOA
+    // CRIAR OBJETO LITERAL
     const pessoa = {
         nome: dadosFormPessoa.get('nome'),
         idade: dadosFormPessoa.get('idade'),
         renda: dadosFormPessoa.get('renda')
     }
 
-    // ADICIONAR PESSOA AO ARRAY
-    addPessoa(pessoa)
+    //CHAMANDO A FUNÇÃO addPessoa E PASSANDO O OBJETO LITERAL pessoa
+addPessoa(pessoa)
 
-    // LIMPAR FORMULÁRIO
-    formPessoa.reset()
+//LIMPAR O FORMULÁRIO
+formPessoa.reset()
+
 })
 
-// FUNÇÃO PARA ADICIONAR PESSOA
+//CRIANDO A FUNÇÃO ADICIONAR PESSOA
 const addPessoa = (objPessoa) => {
 
+    //ADICIONANDO O OBJETO LITERAL NO ARRAY PESSOAS
     pessoas.push(objPessoa)
 
-    listPessoa()
+    //APÓS ADICIONAR O OBJETO LITERAL NO ARRAY CHAMA A FUNÇÃO
+    listPessoas()
 }
 
-// FUNÇÃO PARA LISTAR PESSOAS
-const listPessoa = () => {
+//FUNÇÃO PARA LISTAR PESSOAS DO ARRAY
+const listPessoas = () => {
 
+    //LIMPANDO A DIV LISTA
     divLista.innerHTML = ''
 
+    //PERCORRER O ARRAY pessoas COM O foreach
     pessoas.forEach((elem, i) => {
-
-        divLista.innerHTML += `
-            ${i + 1} - ${elem.nome} - ${elem.idade} - ${elem.renda}<br>
-        `
+        divLista.innerHTML += `${i} - ${elem.nome} - ${elem.idade}, ${elem.renda} <br>`
     })
+
 }
